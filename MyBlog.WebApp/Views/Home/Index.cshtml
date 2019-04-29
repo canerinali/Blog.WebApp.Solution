@@ -1,0 +1,131 @@
+﻿@using Blog.Entities
+@model List<Post>
+<!-- masonry
+   ================================================== -->
+<section id="bricks">
+
+    <div class="row masonry">
+
+        <!-- brick-wrapper -->
+        <div class="bricks-wrapper">
+
+            <div class="grid-sizer"></div>
+
+            <div class="brick entry featured-grid animate-this">
+                <div class="entry-content">
+                    <div id="featured-post-slider" class="flexslider">
+                        <ul class="slides">
+
+                            <li>
+                                <div class="featured-post-slide">
+
+                                    <div class="post-background" style="background-image: url('../../images/thumbs/featured/featured-1.jpg');"></div>
+
+                                    <div class="overlay"></div>
+
+                                    <div class="post-content">
+                                        <ul class="entry-meta">
+                                            <li>September 06, 2016</li>
+                                            <li><a href="#">Naruto Uzumaki</a></li>
+                                        </ul>
+
+                                        <h1 class="slide-title"><a href="single-standard.html" title="">Minimalism Never Goes Out of Style</a></h1>
+                                    </div>
+
+                                </div>
+                            </li> <!-- /slide -->
+
+                            <li>
+                                <div class="featured-post-slide">
+
+                                    <div class="post-background" style="background-image: url('../../images/thumbs/featured/featured-2.jpg');"></div>
+
+                                    <div class="overlay"></div>
+
+                                    <div class="post-content">
+                                        <ul class="entry-meta">
+                                            <li>August 29, 2016</li>
+                                            <li><a href="#">Sasuke Uchiha</a></li>
+                                        </ul>
+
+                                        <h1 class="slide-title"><a href="single-standard.html" title="">Enhancing Your Designs with Negative Space</a></h1>
+                                    </div>
+
+                                </div>
+                            </li> <!-- /slide -->
+
+                            <li>
+                                <div class="featured-post-slide">
+
+                                    <div class="post-background" style="background-image: url('../../images/thumbs/featured/featured-3.jpg');"></div>
+
+                                    <div class="overlay"></div>
+
+                                    <div class="post-content">
+                                        <ul class="entry-meta">
+                                            <li>August 27, 2016</li>
+                                            <li><a href="#" class="author">Naruto Uzumaki</a></li>
+                                        </ul>
+
+                                        <h1 class="slide-title"><a href="single-standard.html" title="">Music Album Cover Designs for Inspiration</a></h1>
+                                    </div>
+
+                                </div>
+                            </li> <!-- end slide -->
+
+                        </ul> <!-- end slides -->
+                    </div> <!-- end featured-post-slider -->
+                </div> <!-- end entry content -->
+            </div>
+            @foreach (Post post in Model)
+            {
+                <article class="brick entry format-standard animate-this" data-post-id="@post.Id">
+
+                    <div class="entry-thumb">
+                        <a href="/Home/DetailPost/" class="thumb-link">
+                            <img src="~/images/@post.PostImageFilename">
+                        </a>
+                    </div>
+
+                    <div class="entry-text">
+                        <div class="entry-header">
+                            <div class="entry-meta">
+                                <span class="cat-links" data-category-id="@post.Category.Id">
+                                    
+                                    <a href="/Home/ByCategory/@post.Category.Id">@post.Category.Title</a>
+                                </span>
+                            </div>
+
+
+                            <h1 class="entry-title"><a href="/Home/DetailPost/@post.Id">@post.Title</a></h1>
+
+                        </div>
+                        <div class="entry-excerpt">
+                            @if (string.IsNullOrEmpty(post.Text) == false && post.Text.Length > 300)
+                            {
+                                @(post.Text.Substring(0, 300))
+                            }
+                            else
+                            {
+                                @post.Text
+                            }
+
+                            <br />
+                            <p class="text-right">@post.ModifiedOn.ToString("dd.MM.yyyy")</p>
+                        </div>
+                    </div>
+
+                </article> <!-- end article -->
+            }
+
+
+
+
+
+        </div> <!-- end brick-wrapper -->
+
+    </div> <!-- end row -->
+
+
+
+</section> <!-- end bricks -->

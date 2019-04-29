@@ -1,0 +1,18 @@
+﻿@using Blog.Entities
+@using MyBlog.WebApp.Models
+
+@{ 
+    List<Category> list = CacheHelper.GetCategoriesFromCache();
+}
+
+<li class="current"><a href="/Home/Index/" title="">Home</a></li>
+<li class="has-children">
+    <a href="@Url.Action("Index","Home")" title="">Categories</a>
+    <ul class="sub-menu">
+        <li><a href="/Home/Index/">Tümü</a></li>
+        @foreach (Category cat in list)
+        {
+            <li><a href="/Home/ByCategory/@cat.Id">@cat.Title</a></li>
+        }
+    </ul>
+</li>

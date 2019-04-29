@@ -1,0 +1,14 @@
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\bin\Debug\Blog.Core.dll
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\bin\Debug\Blog.Core.pdb
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\obj\Debug\Blog.Core.csprojAssemblyReference.cache
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\obj\Debug\Blog.Core.csproj.CoreCompileInputs.cache
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\obj\Debug\Blog.Core.dll
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\obj\Debug\Blog.Core.pdb
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\bin\Debug\Blog.Core.dll.config
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\bin\Debug\EntityFramework.dll
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\bin\Debug\EntityFramework.xml
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\obj\Debug\Blog.Core.csproj.CopyComplete
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\bin\Debug\FakeData.dll
+C:\Users\inali\source\repos\Blog.WebApp.Solution\Blog.Core\bin\Debug\FakeData.pdb

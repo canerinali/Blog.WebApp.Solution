@@ -1,0 +1,62 @@
+﻿@using Blog.Entities
+@model List<Post>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- masonry
+   ================================================== -->
+<section id="bricks">
+
+    <div class="row masonry">
+
+        <!-- brick-wrapper -->
+        <div class="bricks-wrapper">
+
+            <div class="grid-sizer"></div>
+
+            @foreach (Post post in Model)
+            {
+                <article class="brick entry format-standard animate-this" data-post-id="@post.Id">
+
+                    <div class="entry-thumb">
+                        <a href="single-standard.html" class="thumb-link">
+                            <img src="~/images/thumbs/diagonal-building.jpg" alt="@post.Title">
+                        </a>
+                    </div>
+
+                    <div class="entry-text">
+                        <div class="entry-header">
+
+
+
+                            <h1 class="entry-title"><a href="/Home/DetailPost/@post.Id">@post.Title</a></h1>
+
+                        </div>
+                        <div class="entry-excerpt">
+                            @if (string.IsNullOrEmpty(post.Text) == false && post.Text.Length > 300)
+                            {
+                                @(post.Text.Substring(0, 300))
+                            }
+                            else
+                            {
+                                @post.Text
+                            }
+                            <br />
+                            <p class="text-right">@post.ModifiedOn.ToString("dd.MM.yyyy")</p>
+                        </div>
+                    </div>
+
+                </article> <!-- end article -->
+            }
+
+
+
+
+
+        </div> <!-- end brick-wrapper -->
+
+    </div> <!-- end row -->
+
+
+</section> <!-- end bricks -->
